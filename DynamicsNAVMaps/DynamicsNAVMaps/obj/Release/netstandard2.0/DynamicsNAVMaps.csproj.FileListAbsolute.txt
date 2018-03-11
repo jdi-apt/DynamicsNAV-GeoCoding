@@ -9,3 +9,4 @@ C:\Users\JD-PC\Documents\Visual Studio 2017\Projects\DynamicsNAVMaps\DynamicsNAV
 C:\Users\JD-PC\Documents\Visual Studio 2017\Projects\DynamicsNAVMaps\DynamicsNAVMaps\bin\Release\netstandard2.0\Newtonsoft.Json.dll
 C:\Users\JD-PC\Documents\Visual Studio 2017\Projects\DynamicsNAVMaps\DynamicsNAVMaps\bin\Release\netstandard2.0\Newtonsoft.Json.xml
 C:\Users\JD-PC\Documents\Visual Studio 2017\Projects\DynamicsNAVMaps\DynamicsNAVMaps\obj\Release\netstandard2.0\DynamicsNAVMaps.csproj.CopyComplete
+C:\Users\JD-PC\Documents\Visual Studio 2017\Projects\DynamicsNAVMaps\DynamicsNAVMaps\obj\Release\netstandard2.0\DynamicsNAVMaps.csprojResolveAssemblyReference.cache
