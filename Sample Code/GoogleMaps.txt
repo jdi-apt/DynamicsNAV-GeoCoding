@@ -1,0 +1,67 @@
+OBJECT Codeunit 50501 GoogleMaps
+{
+  OBJECT-PROPERTIES
+  {
+    Date=11.03.18;
+    Time=18:28:59;
+    Modified=Yes;
+    Version List=APT;
+  }
+  PROPERTIES
+  {
+    OnRun=BEGIN
+          END;
+
+  }
+  CODE
+  {
+
+    LOCAL PROCEDURE GetGoolgeAPIKey@1000000000() : Text;
+    BEGIN
+      EXIT('');
+    END;
+
+    PROCEDURE MakeRequest@1000000009(pLocationCode@1000000000 : Text;pCity@1000000001 : Text;pAddress@1000000002 : Text;pPostCode@1000000003 : Text;VAR Latitude@1000000004 : Decimal;VAR Longitude@1000000005 : Decimal);
+    VAR
+      GoogleMaps@1000000007 : DotNet "'DynamicsNAVMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.DynamicsNAVMaps.GoogleMaps";
+      GoogleMapsJSON@1000000006 : DotNet "'DynamicsNAVMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.DynamicsNAVMaps.GoogleMaps+GoogleMapsJSON" RUNONCLIENT;
+    BEGIN
+      GoogleMaps := GoogleMaps.GoogleMaps(GetGoolgeAPIKey);
+
+      GoogleMapsJSON := GoogleMaps.MakeRequest(pLocationCode,
+                                               pCity,
+                                               pAddress,
+                                               pPostCode);
+
+      Latitude := GoogleMapsJSON.GetDecimalLatitude;
+      Longitude := GoogleMapsJSON.GetDecimalLongitude;
+    END;
+
+    PROCEDURE MakeCustomerRequest@1000000001(Customer@1000000000 : Record 18;VAR Latitude@1000000001 : Decimal;VAR Longitude@1000000002 : Decimal);
+    BEGIN
+      MakeRequest(Customer."Location Code",
+                  Customer.City,
+                  Customer.Address,
+                  Customer."Post Code",
+                  Latitude,
+                  Longitude);
+    END;
+
+    PROCEDURE MakeShipToAddressRequest@1000000008(ShipToAdress@1000000000 : Record 222;VAR Latitude@1000000002 : Decimal;VAR Longitude@1000000001 : Decimal);
+    VAR
+      BingMaps@1000000004 : DotNet "'DynamicsNAVMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.DynamicsNAVMaps.BingMaps" RUNONCLIENT;
+      BingMapsJSON@1000000003 : DotNet "'DynamicsNAVMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.DynamicsNAVMaps.BingMaps+BingMapsJSON" RUNONCLIENT;
+    BEGIN
+      MakeRequest(ShipToAdress."Location Code",
+                  ShipToAdress.City,
+                  ShipToAdress.Address,
+                  ShipToAdress."Post Code",
+                  Latitude,
+                  Longitude);
+    END;
+
+    BEGIN
+    END.
+  }
+}
+
