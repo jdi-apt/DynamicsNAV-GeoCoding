@@ -1,0 +1,6 @@
+C:\Users\JD-PC\Documents\Visual Studio 2017\Projects\DynamicsNAVMaps\DynamicsNAVMaps\bin\Debug\netstandard2.0\DynamicsNAVMaps.deps.json
+C:\Users\JD-PC\Documents\Visual Studio 2017\Projects\DynamicsNAVMaps\DynamicsNAVMaps\bin\Debug\netstandard2.0\DynamicsNAVMaps.dll
+C:\Users\JD-PC\Documents\Visual Studio 2017\Projects\DynamicsNAVMaps\DynamicsNAVMaps\obj\Debug\netstandard2.0\DynamicsNAVMaps.csprojResolveAssemblyReference.cache
+C:\Users\JD-PC\Documents\Visual Studio 2017\Projects\DynamicsNAVMaps\DynamicsNAVMaps\obj\Debug\netstandard2.0\DynamicsNAVMaps.csproj.CoreCompileInputs.cache
+C:\Users\JD-PC\Documents\Visual Studio 2017\Projects\DynamicsNAVMaps\DynamicsNAVMaps\obj\Debug\netstandard2.0\DynamicsNAVMaps.AssemblyInfoInputs.cache
+C:\Users\JD-PC\Documents\Visual Studio 2017\Projects\DynamicsNAVMaps\DynamicsNAVMaps\obj\Debug\netstandard2.0\DynamicsNAVMaps.AssemblyInfo.cs
