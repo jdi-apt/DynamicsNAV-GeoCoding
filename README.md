@@ -1,3 +1,3 @@
 # DynamicsNAV-Maps
-You can use BingMaps or GoolgeMaps to get coordinates from adresses.
+Use BingMaps or GoolgeMaps to get coordinates from adresses in Dynamics NAV
 
